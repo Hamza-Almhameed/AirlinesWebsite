@@ -1,0 +1,270 @@
+*{
+    font-family: arial;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url('https://img.freepik.com/free-photo/clear-air-fly-fantastic-travel_1232-3824.jpg?w=996&t=st=1656592563~exp=1656593163~hmac=59a8248fb9ebd967d087d2ee2994093da87214d5af89608f1ed42794d9b6cf20');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 130%;
+    backdrop-filter: brightness(60%) blur(3px);
+    width: 100%;
+    height: 100vh;
+    animation: bgAnimation 20s ease-in-out infinite;
+}
+
+nav{
+    position: fixed;
+    width: 80px;
+    height: 70%;
+    background-color: #0090d3;
+    box-shadow: 0 0px 50px #4b4b4b;
+    top: 50%;
+    left: 1%;
+    transform: translateY(-50%);
+    border-radius: 24px;
+    color: white;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    animation: navAnimation 600ms ease-out;
+    z-index: 9999;
+
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+nav li{
+    list-style: none;
+    margin-bottom: 50%;
+    font-size: xx-large;
+    transition: 300ms;
+    width: 100%;
+}
+
+nav ul{
+    width: 90%;
+}
+
+#home{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    animation: homeAnimation 800ms ease-out;
+}
+
+#home h1{
+    color: #22b8fd;
+    font-size: 4em;
+    font-weight: 800;
+}
+
+#home h1 span{
+    color: white;
+}
+
+#home p{
+    color: rgb(214, 214, 214);
+    font-size: 1.5em;
+}
+
+#tickets{
+    background: rgb(235, 235, 235);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: auto;
+    gap: 20px;
+    padding: 30px;
+}
+
+.card{
+    width: 241px;
+    height: 323px;
+    background-color: rgba(0, 0, 0, 0.055);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.card h1{
+    color: #22b8fd;
+    margin-bottom: 20px;
+}
+
+.card p{
+    color: rgb(94, 94, 94);
+}
+
+#about{
+    width: 100%;
+    height: 100%;
+    padding: 80px;
+    color: white;
+    text-align: center;
+    background: linear-gradient(180deg, rgb(235, 235, 235), #0090d3, #0090d3, #0090d3);
+    overflow: auto;
+}
+
+#about h1{
+    font-size: 4em;
+    margin-bottom: 50px;
+}
+
+#about p{
+    font-weight: 100;
+    font-size: x-large;
+}
+
+.login-buttons{
+    position: absolute;
+    top: 3%;
+    left: 95%;
+    transform: translate(-95%, -3%);
+    width: 250px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    z-index: 99;
+}
+
+.login-buttons button{
+    width: 50%;
+    height: 70%;
+    border-radius: 50px;
+    background: transparent;
+    color: white;
+    border: 1px white solid;
+    transition: 400ms;
+}
+
+#login{
+    font-size: 1.3em;
+}
+
+#createAcc{
+    font-size: 1em;
+    width: 75%;
+}
+
+.dialog{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 400px;
+    height: 200px;
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    display: none;
+}
+
+.dialog p{
+    font-size: x-large;
+    color: rgb(102, 102, 102);
+}
+
+.dialog button{
+    background-color: #0090d3;
+    color: white;
+    border: none;
+    width: 90%;
+    height: 30px;
+    border-radius: 3px;
+}
+
+
+
+
+
+
+
+
+
+@keyframes bgAnimation {
+    0%{
+        background-position: 0;
+    }
+
+    50%{
+        background-position: -400px;
+    }
+
+    100%{
+        background-position: 0;
+    }
+}
+
+@keyframes navAnimation {
+    0%{
+        left: -5%;
+    }
+
+    100%{
+        left: 1%;
+    }
+}
+
+@keyframes homeAnimation {
+    0%{
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+nav li:hover{
+    box-shadow: inset 0 -10px 0 #22b8fd, 0 5px 0 rgba(0, 0, 0, .3);
+}
+
+.login-buttons button:hover{
+    background-color: #22b8fd;
+    border: none;
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width:1318px) {
+    body{
+        animation: none;
+        background-size: cover;
+        background-position: center;
+    }
+
+    #home{
+        transform: translateX(25%);
+        width: 80%;
+    }
+}

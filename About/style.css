@@ -1,0 +1,76 @@
+*{
+    font-family: arial;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url('background.png');
+    background-repeat: no-repeat;
+    background-size: 130%;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+    padding: 100px;
+    text-align: center;
+    animation: bgAnimation 3s ease-in-out infinite;
+}
+
+h1{
+    font-size: 4em;
+    margin-bottom: 50px;
+}
+
+p{
+    font-size: 1.5em;
+}
+
+div{
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.144);
+    border-radius: 50px;
+    padding: 10px;
+}
+
+
+
+
+@keyframes bgAnimation {
+    0%{
+        background-position: 0;
+        
+    }
+
+    50%{
+        background-position: -50px;
+    }
+
+    100%{
+        background-position: 0;
+    }
+}
+
+
+
+
+
+
+
+@media only screen and (max-width:900px) {
+    body{
+        padding: 20px;
+        background-position: center;
+        background-size: cover;
+        animation: none;
+    }
+
+    h1{
+        font-size: 3.5em;
+    }
+}
